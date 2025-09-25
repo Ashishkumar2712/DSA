@@ -1,0 +1,26 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+       Set<Integer> set = new HashSet<>();
+        int n = nums.length;      
+
+      for (int i =0; i<n; i++){
+        if(set.contains (nums[i])) return true;
+        set.add(nums[i]);
+        
+            }
+        return false ;
+      }
+    }
+
+
+// Brute force 
+/*int n = nums.length;
+
+for (int i =0; i <n ; i++){
+    for (int j =i+1; j<n ; j++){
+        if (nums[i]==nums[j]) return true ;
+    }
+}
+return false ;
+}
+}*/
