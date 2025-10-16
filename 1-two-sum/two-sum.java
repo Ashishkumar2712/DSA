@@ -9,13 +9,12 @@ class Solution {
             if (map.containsKey(c)){
                 return new int[] {map.get(c),i};
             }
-            map.put(nums[i], i);
+          map.put(nums[i], i);
         }
         return new int[] {};
     }
 }
-
-       
+   
     /*   for (int i =0; i < n ; i++){
         for (int j=i+1; j < n ; j++){
             int sum = nums[i]+nums[j];
