@@ -1,7 +1,6 @@
-
 class Solution {
     public int maxOperations(int[] nums, int k) {
-        Arrays.sort(nums );
+       /* Arrays.sort(nums );
         int n = nums.length;
        int i =0;
        int j =n-1;
@@ -24,4 +23,20 @@ class Solution {
 }
        return count ;
        }
-       }
+   }*/
+
+   HashMap <Integer , Integer > map = new HashMap<>();
+   int count = 0;
+   for (int num: nums ){
+    int comp= k - num;
+    if (map.getOrDefault(comp,0)>0){
+        count++;
+         map.put(comp, map.get(comp) - 1);
+            } else {
+        map.put(num, map.getOrDefault(num, 0)+1);
+
+    }
+   }
+   return count ;
+    }
+}
