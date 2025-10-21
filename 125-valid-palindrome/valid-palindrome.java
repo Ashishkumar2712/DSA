@@ -1,10 +1,10 @@
 class Solution {
-    public boolean isPalindrome(String s) {
-     int n = s.length ();
+  public boolean isPalindrome(String s) {
+    /* int n = s.length ();
      int i = 0;
      int j = n-1 ;
 
-     while (i<j){
+    while (i<j){
         while ( i < j && !Character.isLetterOrDigit(s.charAt(i))){
             i++;
         }
@@ -19,4 +19,12 @@ class Solution {
      }
      return true ;
     }
+}*/
+ String tempString = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+        // Reverse the tempString 
+        String rev = new StringBuffer(tempString).reverse().toString();
+        // check tempString to rev String 
+        return tempString.equals(rev);
+    }
 }
+
