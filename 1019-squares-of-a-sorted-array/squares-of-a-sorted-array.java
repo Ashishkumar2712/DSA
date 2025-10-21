@@ -1,6 +1,6 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        int n = nums.length;
+       /* int n = nums.length;
         int[] res = new int[n];
         int i =0;
         int j = n-1;
@@ -22,12 +22,14 @@ class Solution {
             return res;
 
         }
-        }
-        
-        /*for (int i =0; i <n ; i++){
+        }*/
+        int n = nums.length;
+
+         int[] res = new int[n];
+        for (int i =0; i <n ; i++){
             res[i] = nums[i] * nums[i];
         }
         Arrays.sort (res);
         return res;
     }
-}*/
+}
