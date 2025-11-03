@@ -27,7 +27,7 @@ class Solution {
 
     // optimize 
 
-   Set<Integer> set = new HashSet<>();
+   /*Set<Integer> set = new HashSet<>();
    Arrays.sort(nums1);
    Arrays.sort(nums2);
 
@@ -54,7 +54,28 @@ class Solution {
    return res ;
     }
 }
+*/
+int n = nums1.length;
+int m = nums2.length;
+Set <Integer> set = new HashSet<>();
+ArrayList<Integer> list = new ArrayList<>();
 
+for (int i =0; i < n ; i++){
+    set.add(nums1[i]);
+}
+for (int j =0; j<m; j++){
+    if (set.contains (nums2[j])){
+        list.add(nums2[j]);
+        set.remove (nums2[j]);
+    }
+}
+int[] result = new int [list.size()];
+for (int k=0; k<list.size(); k++){
+    result[k] = list.get(k);
+}
+return result ;
+    }
+}
 
 
         
