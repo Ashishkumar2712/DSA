@@ -5,7 +5,7 @@ class Solution {
         int n = nums.length;
         int pf =0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < n; i++) {
             pf += nums[i] ;
              int m= pf% k;
 
@@ -15,7 +15,7 @@ class Solution {
                 }
             } else {
                 map.put(m, i);
-            }
+           }
         }
         return false;
     }
