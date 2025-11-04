@@ -21,8 +21,10 @@ map.put(0,1);
 int count = 0;
 int pf =0;
 
-for (int num: nums){
-pf += num;
+//for (int num: nums){
+    for (int i =0; i<n; i++){
+   
+pf += nums[i];
 int mod = ((pf % k) +k) %k;
 
 if (map.containsKey (mod)){
