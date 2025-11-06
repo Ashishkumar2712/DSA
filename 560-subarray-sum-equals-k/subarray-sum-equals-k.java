@@ -22,8 +22,8 @@ int count = 0;
 int pf = 0;
 
 
-for (int num: nums){
-pf += num;
+for (int i=0; i<n; i++){
+pf += nums[i];
 
 if (map.containsKey (pf-k)){
     count += map.get(pf-k);
