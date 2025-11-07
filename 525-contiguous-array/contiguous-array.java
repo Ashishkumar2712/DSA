@@ -7,7 +7,7 @@ class Solution {
         int sum =0;
 
         for (int j =0; j<n; j++){
-           sum += (nums[j] == 0 ? -1:1);
+          sum += (nums[j] == 0 ? -1:1);
 
            if (map.containsKey(sum)){
             
