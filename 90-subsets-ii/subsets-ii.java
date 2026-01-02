@@ -13,7 +13,6 @@ class Solution {
 
           result.add (new ArrayList<>(current));
           for (int i =start; i<n; i++){
-             //if (i > start && nums[i] == nums[i - 1]) continue;
             current.add (nums[i]);
             backtrack (nums, i+1, current , result );
             current.remove(current.size()-1);
