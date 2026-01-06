@@ -3,7 +3,7 @@ class Solution {
         if (n==0) return 0;
         if (n==1 || n==2 ) return 1;
 
-        int[] dp = new int[n+1];
+      /*  int[] dp = new int[n+1];
         dp[0] = 0;
         dp[1] = 1;
         dp[2] = 1 ;
@@ -13,5 +13,21 @@ class Solution {
 
         }
         return dp[n];
+    }
+}*/
+
+int a = 0;
+int b = 1 ;
+int c =1;
+
+for (int i=3; i<=n ; i++){
+    int total = a+b+c;
+
+    a= b;
+    b=c;
+    c= total;
+
+}
+ return c;
     }
 }
