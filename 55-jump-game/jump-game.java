@@ -9,7 +9,7 @@ class Solution {
                 return false ;
 
             }
-            distance = Math.max(distance, i+nums[i]);
+           distance = Math.max(distance, i+nums[i]);
             }
             return true ;
         }
