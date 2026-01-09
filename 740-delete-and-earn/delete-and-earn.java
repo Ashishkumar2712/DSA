@@ -1,6 +1,6 @@
 class Solution {
     public int deleteAndEarn(int[] nums) {
-       int maxVal = 0;
+      /* int maxVal = 0;
         for (int num : nums) maxVal = Math.max(maxVal, num);
 
         int[] points = new int[maxVal + 1];
@@ -20,4 +20,27 @@ class Solution {
         
         return prev1;
     }
+}*/
+
+
+int n = nums.length;
+if (n==0){
+    return 0;
+}
+    int[] val = new int[10001];
+    for (int num:nums){
+        val[num] += num;
+    }
+
+    int prv1 = 0;
+    int prv2 = 0;
+
+    for (int value: val){
+        int temp = prv1;
+        prv1 = Math.max(prv2 + value , prv1);
+        prv2 = temp;
+    }
+    return prv1;
+}
+
 }
