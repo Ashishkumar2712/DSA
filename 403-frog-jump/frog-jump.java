@@ -1,7 +1,7 @@
 class Solution {
     public boolean canCross(int[] stones) {
         int n = stones.length;
-        if (stones[1] != 1) return false;
+       // if (stones[1] != 1) return false;
 
         boolean[][] dp = new boolean[n][n+1];
         dp[0][1]= true ;
