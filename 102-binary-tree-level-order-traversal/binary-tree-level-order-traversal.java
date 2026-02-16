@@ -15,31 +15,23 @@
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
-         List<List<Integer>> result = new ArrayList<>();
-        if (root == null) return result;
+        List<List<Integer>> list = new ArrayList<>();
+        dfs (root, 0, list);
+        return list;
+    }
 
-        Queue <TreeNode>  treeNodeQueue = new LinkedList<>();
-        treeNodeQueue. add (root);
+        private void dfs(TreeNode node , int level, List<List<Integer>>list){
+            if (node == null) return ;
 
-        while (!treeNodeQueue.isEmpty()){
-            int levelSize = treeNodeQueue.size(); 
-            List<Integer> level = new ArrayList<>();
-
-            for (int i = 0; i < levelSize; i++) {
-                TreeNode treeNode = treeNodeQueue.poll();
-                level.add(treeNode.val);
-
-            if (treeNode.left != null){
-                treeNodeQueue.add(treeNode.left);
+            if (list.size() == level){
+                list.add(new ArrayList<>());
             }
-            if (treeNode.right != null){
-                treeNodeQueue.add(treeNode.right);
-            }
-        }
-         result.add(level); 
-        }
-    return result;
-    
+            list.get(level).add(node.val);
+            dfs(node.left , level+1 , list);
+            dfs (node.right , level+1, list);
 
+        
+
+        
     }
 }
