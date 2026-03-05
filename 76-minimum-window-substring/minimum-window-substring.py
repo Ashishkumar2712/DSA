@@ -18,6 +18,9 @@ class Solution:
         ans= ""
         while q < len(s):
             l2[ord(s[q])-ord('A')] = l2[ord(s[q])-ord('A')] + 1
+            if q-i +1 < len(t):
+                q = q+1
+                continue
             c = self.comparearr(l1,l2)
             if c:
                 while self.comparearr(l1,l2) and i < len(s):
