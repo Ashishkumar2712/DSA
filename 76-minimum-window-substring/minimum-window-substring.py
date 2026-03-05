@@ -17,8 +17,6 @@ class Solution:
         mini = 1000000
         ans= ""
         while q < len(s):
-            print(ord(s[q]))
-            print(s[q])
             l2[ord(s[q])] = l2[ord(s[q])] + 1
             c = self.comparearr(l1,l2)
             if c:
