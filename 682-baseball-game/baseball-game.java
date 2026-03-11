@@ -13,7 +13,7 @@ class Solution {
             int k = val1+val2 ;
             st.push(val2);
             st.push(val1);
-            st.push(k);
+            st.push(val1+val2);
 
         }
         else if (num.equals("D")){
