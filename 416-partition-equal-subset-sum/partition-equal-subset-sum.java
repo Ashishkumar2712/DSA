@@ -14,7 +14,7 @@ class Solution {
 
         for (int num : nums) {
             for (int i = target; i >= num; i--) {
-                dp[i] = dp[i] || dp[i - num];
+              dp[i] = dp[i] || dp[i - num];
                 if (dp[target])
                     return true;
             }
