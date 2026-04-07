@@ -31,7 +31,7 @@ class Solution {
 
       }
 
-          ListNode result = DummyHead.next;
+         ListNode result = DummyHead.next;
           DummyHead = null;
           return result ;
       
