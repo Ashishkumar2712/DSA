@@ -29,9 +29,6 @@ class Solution {
             list.get(level).add(node.val);
             dfs(node.left , level+1 , list);
             dfs (node.right , level+1, list);
-
-        
-
         
     }
 }
