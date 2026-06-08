@@ -11,18 +11,20 @@ class Solution {
             int count = 1;
 
             // for left of array
-            int num = nums[i];
-            while (set.contains(--num)){
+            int num = nums[i]-1;
+            while (set.contains(num)){
                 count++;
                 set.remove(num);
+                num--;
             }
 
             // for right of an array
 
-            num = nums[i];
-            while (set.contains(++num)){
+            num = nums[i] +1;
+            while (set.contains(num)){
                 count++;
                 set.remove(num);
+                num++;
             }
             max = Math.max(max , count );
         }
